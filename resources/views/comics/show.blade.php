@@ -24,8 +24,8 @@
                                 AVAILABLE
                             </span>
                         </div>
-                        <div class="pb-right text-white">
-                            Check availability
+                        <div class="pb-right text-white d-flex justify-content-center align-items-center gap-2">
+                            Check availability <i class="fa-solid fa-sort-down"></i>
                         </div>
                     </div>
 
