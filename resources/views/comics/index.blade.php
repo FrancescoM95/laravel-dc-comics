@@ -7,7 +7,7 @@
         <div class="row g-3 py-5">
             @foreach ($comics as $index => $comic)
                 <div class="comic-card">
-                    <a href="{{ route('comics.show', $comic) }}">
+                    <a href="{{ route('comics.show', $comic->id) }}">
                         <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                         <h5>{{ $comic->title }}</h5>
                     </a>

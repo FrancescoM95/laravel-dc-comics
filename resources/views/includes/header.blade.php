@@ -8,7 +8,7 @@
                 <a href="{{route('home')}}" class="{{Route::is('home') ? 'active' : ''}}">HOME</a>
             </li>
             <li>
-                <a href="{{ route('comics.index') }}" class="{{ Route::is('comics.index', 'comics.show') ? 'active' : '' }}">COMICS</a>
+                <a href="{{ route('comics.index') }}" class="{{ Request::is('comics*') ? 'active' : '' }}">COMICS</a>
             </li>
             <li>
                 <a href="">MOVIES</a>
