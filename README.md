@@ -28,6 +28,7 @@ Qualunque cosa a piacere delle varie che abbiamo visto.
 
 ## esercizio di oggi: **Laravel CRUD Create & Store**
 
+14/03/2024
 nome repo: `laravel-dc-comics`  (stessa di ieri)
 
 1. Proseguiamo con l'esercizio Comics e aggiungiamo la possibilità di aggiungere un fumetto!
@@ -38,3 +39,18 @@ nome repo: `laravel-dc-comics`  (stessa di ieri)
 ### BONUS
 
 Provare a implementare una minima validazione come visto stamattina!
+
+---
+
+## esercizio di oggi: **Laravel CRUD Edit & Update**
+
+nome repo: `laravel-dc-comics` (stessa di ieri)
+
+- Proseguiamo con l'esercizio Comics e aggiungiamo la possibilità di modificare un fumetto!
+- Ci servirà una rotta per il form e un'altra per l'effettiva modifica del film nel database!
+- Aiutatevi con slide e documentazione!
+
+### BONUS
+
+- Provare a implementare la validazione come visto stamattina!
+- Provare a unire i form di edit e create

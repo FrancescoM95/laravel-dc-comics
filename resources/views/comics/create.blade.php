@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'COMICS')
+@section('title', 'NEW COMIC')
 
 @section('main-content')
 <div class="container py-4">
@@ -54,13 +54,11 @@
             </div>
             <div class="col-12">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Insert description">
-                    {{old('description', '')}}
-                </textarea>
+                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Insert description">{{old('description', '')}}</textarea>
             </div>
-            <div class="col-2 d-flex gap-2">
-                <button type="submit" class="btn btn-primary">Aggiungi</button>
-                <button type="reset" class="btn btn-warning">Svuota</button>
+            <div class="col-3 d-flex gap-2 justify-content-end">
+                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="reset" class="btn btn-warning">Reset</button>
             </div>
         </div>  
     </form>
