@@ -43,7 +43,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-6">
                     <table class="table">
                         <thead>
@@ -102,6 +102,9 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="col-2 mt-3">
+                    <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning">Modify</a>
                 </div>
             </div>
         </div>
