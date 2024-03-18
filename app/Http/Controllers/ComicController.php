@@ -48,7 +48,9 @@ class ComicController extends Controller
 
         $comic->save();
 
-        return to_route('comics.show', $comic->id);
+        return to_route('comics.show', $comic->id)
+            ->with('type', 'success')
+            ->with('message', "$comic->title successfully created.");
     }
 
     /**
@@ -87,7 +89,9 @@ class ComicController extends Controller
 
         $comic->update($data);
 
-        return to_route('comics.show', $comic->id);
+        return to_route('comics.show', $comic->id)
+            ->with('type', 'success')
+            ->with('message', "$comic->title successfully edited.");
     }
 
     /**
@@ -97,7 +101,9 @@ class ComicController extends Controller
     {
         $comic->delete();
 
-        return to_route('comics.index');
+        return to_route('comics.index')
+            ->with('type', 'success')
+            ->with('message', "$comic->title successfully deleted.");
     }
 
 
@@ -115,13 +121,17 @@ class ComicController extends Controller
     {
         $comic->restore();
 
-        return to_route('comics.index');
+        return to_route('comics.index')
+            ->with('type', 'info')
+            ->with('message', "$comic->title has been successfully restored!");
     }
 
     public function drop(Comic $comic)
     {
         $comic->forceDelete();
 
-        return to_route('comics.index');
+        return to_route('comics.index')
+            ->with('type', 'warning')
+            ->with('message', "$comic->title has been permanently deleted!");
     }
 };

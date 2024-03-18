@@ -10,6 +10,11 @@
         </figure>
         <div class="container w-75">
             <div class="row">
+                @session('message')
+                    <div class="alert alert-{{ session('type', 'info') }}">
+                        <p>{{ $value }}</p>
+                    </div>
+                 @endsession
                 <div class="col-8">
                     <h2>{{$comic->title}}</h2>
                     <div class="price-box">

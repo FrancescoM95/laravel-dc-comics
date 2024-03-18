@@ -3,8 +3,14 @@
 @section('title', 'COMICS')
 
 @section('main-content')
-    <div class="container">
-        <div class="w-100 text-center pt-4">
+    <div class="container pt-5">
+        @session('message')
+            <div class="alert alert-{{ session('type', 'info') }}">
+                <p>{{ $value }}</p>
+            </div>
+        @endsession
+
+        <div class="w-100 text-center pt-2">
             <a href="{{route('comics.create')}}" class="btn btn-primary me-2">Add comic</a>
             <a href="{{route('comics.trash')}}" class="btn btn-danger">View deleted</a>
         </div>
