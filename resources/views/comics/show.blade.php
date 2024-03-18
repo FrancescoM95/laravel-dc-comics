@@ -103,9 +103,14 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="col-2 mt-3">
-                    <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-warning">Modify</a>
-                </div>
+                <div class="col-3 mt-3 d-flex gap-2">
+                    <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning">Modify</a>
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div> 
             </div>
         </div>
     </section>
