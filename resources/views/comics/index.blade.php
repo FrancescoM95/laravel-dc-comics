@@ -5,7 +5,8 @@
 @section('main-content')
     <div class="container">
         <div class="w-100 text-center pt-4">
-            <a href="{{route('comics.create')}}" class="btn btn-primary">Aggiungi Fumetto</a>
+            <a href="{{route('comics.create')}}" class="btn btn-primary me-2">Add comic</a>
+            <a href="{{route('comics.trash')}}" class="btn btn-danger">View deleted</a>
         </div>
         <div class="row g-3 py-4">
             @foreach ($comics as $index => $comic)
