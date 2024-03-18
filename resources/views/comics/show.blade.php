@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-3 mt-3 d-flex gap-2">
                     <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning">Modify</a>
-                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" id="delete-form">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger">Delete</button>
@@ -114,4 +114,18 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('scripts')
+    <script>
+        const deleteForm = document.getElementById('delete-form');
+
+        deleteForm.addEventListener('submit', e => {
+            e.preventDefault();
+
+            const confirmation = confirm('Sei sicuro di voler eliminare il fumetto {{ $comic->title }} ?');
+
+            if(confirmation) deleteForm.submit();
+        });
+    </script>
 @endsection
